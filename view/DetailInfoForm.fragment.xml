@@ -1,0 +1,35 @@
+<core:FragmentDefinition xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns="sap.m">
+	<l:Grid id="detailFragment" defaultSpan="L12 M12 S12" width="auto">
+		<l:content>
+			<f:SimpleForm minWidth="1024" maxContainerCols="2" editable="false" layout="ResponsiveGridLayout" title="{i18n>tab_supplier_sub_title}" labelSpanL="3"
+				labelSpanM="3" emptySpanL="4" emptySpanM="4" columnsL="1" columnsM="1">
+				<f:content>
+				<Label text="{i18n>label_SupplierID}"/>
+<Text text="{SupplierID}"/>
+<Label text="{i18n>label_CompanyName}"/>
+<Text text="{CompanyName}"/>
+<Label text="{i18n>label_ContactName}"/>
+<Text text="{ContactName}"/>
+<Label text="{i18n>label_ContactTitle}"/>
+<Text text="{ContactTitle}"/>
+<Label text="{i18n>label_Address}"/>
+<Text text="{Address}"/>
+<Label text="{i18n>label_City}"/>
+<Text text="{City}"/>
+<Label text="{i18n>label_PostalCode}"/>
+<Text text="{PostalCode}"/>
+<Label text="{i18n>label_Country}"/>
+<Text text="{Country}"/>
+<Label text="{i18n>label_Region}"/>
+<Text text="{Region}"/>
+<Label text="{i18n>label_Phone}"/>
+<Text text="{Phone}"/>
+<Label text="{i18n>label_Fax}"/>
+<Text text="{Fax}"/>
+<Label text="{i18n>label_HomePage}"/>
+<Text text="{HomePage}"/>
+				</f:content>
+			</f:SimpleForm>
+		</l:content>
+	</l:Grid>
+</core:FragmentDefinition>
