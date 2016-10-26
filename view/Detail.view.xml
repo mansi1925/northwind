@@ -1,0 +1,36 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns="sap.m" controllerName="com.test.northwind.view.Detail">
+	<Page showNavButton="{device>/isPhone}" navButtonPress="onNavBack" class="sapUiFioriObjectPage" title="{i18n>detailTitle}">
+		<content>
+			<ObjectHeader title="{ProductName}" number="{i18n>currencySymbol}{UnitPrice}" numberUnit="{QuantityPerUnit}">
+				<ObjectAttribute title="{i18n>label_ProductID}" text="{ProductID}"/>
+				<ObjectAttribute title="{i18n>label_UnitsInStock}" text="{UnitsInStock}"/>
+				<ObjectAttribute title="{i18n>label_UnitsOnOrder}" text="{UnitsOnOrder}"/>
+				<ObjectAttribute text="{i18n>currencySymbol}{inventoryValue}" title="{i18n>label_CurrentInventoryValue}"/>
+			</ObjectHeader>
+			<IconTabBar select="onDetailSelect" id="idIconTabBar">
+				<items>
+					<!--<IconTabFilter key="Supplier" text="Supplier" icon="sap-icon://supplier">-->
+					<!--key="Detail" -->
+					<!--	<content>-->
+					<!--		<core:Fragment fragmentName="com.test.northwind.view.DetailInfoForm" type="XML"/>-->
+					<!--	</content>-->
+					<!--</IconTabFilter>-->
+					<!--<IconTabFilter text="Details" icon="sap-icon://product" />-->
+					<IconTabFilter icon="sap-icon://supplier" key="Supplier" text="{i18n>tab_supplier_short_title}">
+						<content>
+							<core:Fragment fragmentName="com.test.northwind.view.DetailInfoForm" type="XML"/>
+						</content>
+					</IconTabFilter>
+					<IconTabFilter count="" icon="sap-icon://product" iconColor="Default" id="__filter3" text="{i18n>tab_product_short_title}">
+						<content>
+							<core:Fragment fragmentName="com.test.northwind.view.ProductDetailInfoForm" type="XML"/>
+						</content>
+					</IconTabFilter>
+				</items>
+			</IconTabBar>
+		</content>
+		<footer>
+			<Toolbar/>
+		</footer>
+	</Page>
+</mvc:View>
